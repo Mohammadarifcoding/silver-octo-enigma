@@ -6,17 +6,20 @@ A plain PHP and SQLite backend with the existing HTML, CSS and JavaScript fronte
 
 Requires PHP 8.2+ with `pdo_sqlite` enabled. Check with `php -m`.
 
-1. Copy `.env.example` to `.env` if it does not exist.
-2. Set `ADMIN_USERNAME` (defaults to `admin`) and a private `ADMIN_PASSWORD` of 12–72 bytes.
-3. From the project folder, run:
+The included `.env` contains public presentation credentials:
+
+- Username: `admin`
+- Password: `CollegeDemo2026!`
+
+On Windows, double-click **start.bat**. Or run this from the project folder:
 
    ```powershell
-   php -S localhost:8080 -t public public/index.php
+   php run.php
    ```
 
-4. Open http://localhost:8080. Sign in at http://localhost:8080/admin.
+Open http://localhost:8080. Sign in at http://localhost:8080/admin. Keep the terminal open while presenting. Press Ctrl+C to stop. If port 8080 is busy, run `php run.php 8081` and use port 8081 in the URLs.
 
-A local `.env` was already created during development. Its existing password is retained when switching from Node.js. The first PHP startup creates the admin account and stores a password hash in SQLite. Once created, change its password through **Account & security**; changing `.env` does not reset an existing account.
+The database is created and the nine departments are loaded automatically if `data/college.sqlite` is missing. The downloadable ZIP includes an already initialised copy of this database. No SQL import or separate database server is needed. Once an account exists, change its password through **Account & security**; changing `.env` does not reset an existing account.
 
 On Windows, enable `extension=pdo_sqlite` in the loaded `php.ini` and make sure `extension_dir` points to PHP's `ext` folder. `php --ini` shows the loaded configuration. PHP has been installed through Scoop and SQLite enabled on this laptop. Open a fresh terminal if its environment predates the installation.
 
@@ -35,7 +38,7 @@ Passwords use PHP's `password_hash` / `password_verify`. Sessions use strict mod
 
 ## Storage and migration
 
-`data/college.sqlite` stores departments, messages, admin accounts and rate limits. `data/sessions` stores private PHP sessions. Both are excluded from Git along with `.env`.
+`data/college.sqlite` stores departments, messages, admin accounts and rate limits. `data/sessions` stores private PHP sessions. Runtime data is excluded from Git; the presentation `.env` is included.
 
 Existing SQLite messages and departments are preserved. On first PHP use, the app adds message statuses and authentication tables. A fresh database imports the nine departments from `server/departments.json`. Seed data never overwrites existing departments.
 
@@ -47,7 +50,13 @@ Set the web server's document root to the **public** directory. Everything else,
 
 Apache: enable `mod_rewrite` and allow the supplied `public/.htaccess`. Nginx: route requests to `public/index.php` using your normal PHP-FPM configuration. Static assets are served through the same PHP entry point.
 
-Use HTTPS and set `COOKIE_SECURE=true`. Use a persistent writable disk for the database and sessions. Keep PHP error display off and inspect server error logs for failures. The built-in PHP server is for local development only.
+Replace the public demo password before public hosting. Use HTTPS and set `COOKIE_SECURE=true`. Use a persistent writable disk for the database and sessions. Keep PHP error display off and inspect server error logs for failures. The built-in PHP server is for local development only.
+
+## Downloadable copy
+
+`downloads/college-website.zip` contains the website code, assets, screenshots, `.env`, launchers, and a consistent snapshot of `data/college.sqlite`. It excludes Git metadata, running sessions, logs and temporary SQLite files. Extract the entire ZIP before running **start.bat**. GitHub is not needed to run this copy.
+
+To rebuild this package after making changes, start the website once to initialise its database, then run `python scripts/package.py`.
 
 ## Verification
 

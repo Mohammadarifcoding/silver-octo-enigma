@@ -1,6 +1,6 @@
 node_modules/
-.env
 data/
+downloads/
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
