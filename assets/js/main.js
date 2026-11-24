@@ -217,13 +217,35 @@
       f.addEventListener("blur", () => check(f));
       f.addEventListener("input", () => { if (f.closest(".field").classList.contains("invalid")) check(f); });
     });
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const fields = $$("input, select, textarea", form);
       const allOk = fields.map(check).every(Boolean);
       if (!allOk) { fields.find((f) => f.closest(".field").classList.contains("invalid")).focus(); return; }
-      $(".form-ok", form).classList.add("show");
-      form.reset();
+      const button = $("button[type=submit]", form);
+      const status = $(".form-ok", form);
+      button.disabled = true;
+      status.classList.remove("show");
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Unable to send your message.");
+        status.textContent = "Thank you. Your message has been recorded and the office will get back to you.";
+        status.style.color = "";
+        form.reset();
+      } catch (error) {
+        status.textContent = error instanceof TypeError || error instanceof SyntaxError
+          ? "Unable to send your message. Please check your connection and try again."
+          : error.message;
+        status.style.color = "var(--danger)";
+      } finally {
+        status.classList.add("show");
+        button.disabled = false;
+      }
     });
   }
 

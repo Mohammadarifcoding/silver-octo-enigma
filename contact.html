@@ -112,18 +112,18 @@
         <div class="field-row">
           <div class="field">
             <label for="f-name">Your name</label>
-            <input id="f-name" name="name" type="text" autocomplete="name">
+            <input id="f-name" name="name" type="text" autocomplete="name" maxlength="120" required>
             <span class="err">Please enter your name.</span>
           </div>
           <div class="field">
             <label for="f-phone">Mobile (optional)</label>
-            <input id="f-phone" name="phone" type="tel" placeholder="017XXXXXXXX" autocomplete="tel">
+            <input id="f-phone" name="phone" type="tel" placeholder="017XXXXXXXX" autocomplete="tel" maxlength="30">
             <span class="err">Enter a valid Bangladeshi mobile number.</span>
           </div>
         </div>
         <div class="field">
           <label for="f-email">Email</label>
-          <input id="f-email" name="email" type="email" autocomplete="email">
+          <input id="f-email" name="email" type="email" autocomplete="email" maxlength="254" required>
           <span class="err">Enter a valid email address.</span>
         </div>
         <div class="field">
@@ -140,7 +140,7 @@
         </div>
         <div class="field">
           <label for="f-msg">Message</label>
-          <textarea id="f-msg" name="message"></textarea>
+          <textarea id="f-msg" name="message" minlength="20" maxlength="5000" required></textarea>
           <span class="err">Message must be at least 20 characters.</span>
         </div>
         <button class="btn btn-primary" type="submit">Send message
@@ -189,6 +189,7 @@
           <li><a href="notices.html">Notice Board</a></li>
           <li><a href="https://www.bteb.gov.bd" target="_blank" rel="noopener">BTEB Results</a></li>
           <li><a href="contact.html">Feedback</a></li>
+          <li><a href="/admin">Admin login</a></li>
         </ul>
       </div>
       <div>

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "civil",
+    "name": "Civil Technology",
+    "name_bn": "সিভিল টেকনোলজি",
+    "code": "CT",
+    "category": "build",
+    "description": "Plan, measure and build. Students learn surveying, structural and architectural drawing, construction materials, estimating and costing, and site supervision.",
+    "image": "assets/img/dept-civil.jpg",
+    "labs": [
+      "Surveying",
+      "Materials testing",
+      "AutoCAD",
+      "Estimating"
+    ],
+    "careers": "Construction firms, LGED, PWD, consulting offices",
+    "seats": 200,
+    "position": 0
+  },
+  {
+    "id": "electrical",
+    "name": "Electrical Technology",
+    "name_bn": "ইলেকট্রিক্যাল টেকনোলজি",
+    "code": "ET",
+    "category": "power",
+    "description": "Generation to the switchboard: electrical machines, house and industrial wiring, measurement, switchgear and distribution networks.",
+    "image": "assets/img/dept-electrical.jpg",
+    "labs": [
+      "Machines lab",
+      "Wiring shop",
+      "Measurement",
+      "Switchgear"
+    ],
+    "careers": "Power utilities, factories, REB, WZPDCL",
+    "seats": 200,
+    "position": 1
+  },
+  {
+    "id": "mechanical",
+    "name": "Mechanical Technology",
+    "name_bn": "মেকানিক্যাল টেকনোলজি",
+    "code": "MT",
+    "category": "build",
+    "description": "Machine-shop practice, welding, foundry and forging, thermal engineering, machine design and production management for the region's factories.",
+    "image": "assets/img/dept-mechanical.jpg",
+    "labs": [
+      "Machine shop",
+      "Welding",
+      "Foundry",
+      "Thermo lab"
+    ],
+    "careers": "Manufacturing plants, shipyards, jute and steel mills",
+    "seats": 200,
+    "position": 2
+  },
+  {
+    "id": "power",
+    "name": "Power Technology",
+    "name_bn": "পাওয়ার টেকনোলজি",
+    "code": "PT",
+    "category": "power",
+    "description": "Power plants, internal combustion engines, boilers, turbines and energy conversion, with maintenance practice for running plants.",
+    "image": "assets/img/dept-power.jpg",
+    "labs": [
+      "IC engines",
+      "Boiler lab",
+      "Power plant",
+      "Auto shop"
+    ],
+    "careers": "Power stations, automobile and marine workshops",
+    "seats": 100,
+    "position": 3
+  },
+  {
+    "id": "electronics",
+    "name": "Electronics Technology",
+    "name_bn": "ইলেকট্রনিক্স টেকনোলজি",
+    "code": "ENT",
+    "category": "digital",
+    "description": "Analog and digital circuits, microcontrollers, communication systems and electronic maintenance, built on bench practice.",
+    "image": "assets/img/dept-electronics.jpg",
+    "labs": [
+      "Circuit lab",
+      "Digital lab",
+      "Microcontroller",
+      "PCB"
+    ],
+    "careers": "Electronics manufacturing, telecom, service centres",
+    "seats": 100,
+    "position": 4
+  },
+  {
+    "id": "computer",
+    "name": "Computer Science & Technology",
+    "name_bn": "কম্পিউটার সায়েন্স অ্যান্ড টেকনোলজি",
+    "code": "CST",
+    "category": "digital",
+    "description": "Programming in Python and Java, web design and development, databases, computer networking and network administration.",
+    "image": "assets/img/dept-computer.jpg",
+    "labs": [
+      "Programming",
+      "Networking",
+      "Web dev",
+      "Hardware"
+    ],
+    "careers": "Software firms, ISPs, IT support, freelancing",
+    "seats": 100,
+    "position": 5
+  },
+  {
+    "id": "environmental",
+    "name": "Environmental Technology",
+    "name_bn": "এনভায়রনমেন্টাল টেকনোলজি",
+    "code": "ENVT",
+    "category": "process",
+    "description": "Water and wastewater treatment, solid-waste management, pollution monitoring and occupational safety. Formerly known as Biophysical Environment Technology.",
+    "image": "assets/img/dept-environment.jpg",
+    "labs": [
+      "Water lab",
+      "Waste mgmt.",
+      "Monitoring",
+      "Safety"
+    ],
+    "careers": "DoE, water utilities, ETP plants, NGOs",
+    "seats": 100,
+    "position": 6
+  },
+  {
+    "id": "ipct",
+    "name": "Instrumentation & Process Control",
+    "name_bn": "ইন্সট্রুমেন্টেশন অ্যান্ড প্রসেস কন্ট্রোল",
+    "code": "IPCT",
+    "category": "process",
+    "description": "Sensors, transducers, calibration, PLCs and process control loops used to run modern industrial plants.",
+    "image": "assets/img/dept-ipct.jpg",
+    "labs": [
+      "PLC lab",
+      "Calibration",
+      "Sensors",
+      "SCADA"
+    ],
+    "careers": "Fertiliser, cement, power and process industries",
+    "seats": 100,
+    "position": 7
+  },
+  {
+    "id": "rac",
+    "name": "Refrigeration & Air Conditioning",
+    "name_bn": "রেফ্রিজারেশন অ্যান্ড এয়ার কন্ডিশনিং",
+    "code": "RAC",
+    "category": "process",
+    "description": "Refrigeration cycles, cold storage, HVAC design, installation and servicing for homes, industry and the fish-processing sector.",
+    "image": "assets/img/dept-rac.jpg",
+    "labs": [
+      "RAC shop",
+      "HVAC",
+      "Cold storage",
+      "Brazing"
+    ],
+    "careers": "HVAC contractors, cold storages, fish processing",
+    "seats": 100,
+    "position": 8
+  }
+]
