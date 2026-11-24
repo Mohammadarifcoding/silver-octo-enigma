@@ -1,0 +1,1 @@
+for /f "delims=" %P in ('php -r "echo dirname(PHP_BINARY);"') do php -d "extension_dir=%P\ext" -d extension=pdo_sqlite -S localhost:8080 -t public public/index.php
