@@ -17,3 +17,13 @@ Double-click `start.bat`, or run `php run.php` from the project folder.
 - Admin dashboard: http://localhost:8080/admin
 
 If PHP reports that SQLite is disabled, use the command in [start-website-command.txt](start-website-command.txt) in Command Prompt.
+
+## Cholo website
+
+- **Website:** https://falling-deny-exhibition-spec.trycloudflare.com
+- **Admin dashboard:** https://falling-deny-exhibition-spec.trycloudflare.com/admin
+- **Admin username:** `admin`
+- **Admin password:** `psPkTh1r3k84QyEsQAZAysQk`
+- **Email:** Not required
+
+The links work while the laptop and Cloudflare tunnel are running.
